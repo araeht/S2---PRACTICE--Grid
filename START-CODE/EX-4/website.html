@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        background-color: #f4f4f4;
+      }
+
+      /* Sidebar Styles */
+      #sidebar {
+        width: 250px;
+        background-color: #ffffff;
+        padding: 20px;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      }
+
+      .title-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .title-container img {
+        margin-right: 15px;
+      }
+
+      .links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .links:hover {
+        background-color: #f0f0f0;
+      }
+
+      /* Main Dashboard Content */
+      #main-dashboard-content {
+        flex-grow: 1;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      #top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .input-box {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .input-box input {
+        border: none;
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+
+      .action-icons {
+        display: flex;
+        gap: 15px;
+      }
+
+      #welcome-title {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      /* Grid Container */
+      #grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .grid-item {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+      }
+
+      .grid-item:hover {
+        transform: scale(1.05);
+      }
+
+      .grid-image {
+        max-width: 200px;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .grid-item span {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="sidebar">
+      <section class="title-container">
+        <img src="./assets/play logo.png" width="40px" alt="logo" />
+        <h1>Music Dashboard </h1>
+      </section>
+      <section class="links-container">
+        <div class="links">
+          <div class="icon">
+            <i class="fas fa-house-user"></i>
+          </div>
+          <span>Dashboard</span>
+        </div>
+        <div class="links">
+          <div class="icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <span>Analytics</span>
+        </div>
+        <div class="links">
+          <div class="icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <span>Messages</span>
+        </div>
+        <div class="links">
+          <div class="icon">
+            <i class="fas fa-cog"></i>
+          </div>
+          <span>Settings</span>
+        </div>
+      </section>
+    </section>
+    <section id="main-dashboard-content">
+      <section id="top-section">
+        <div class="input-box">
+          <input placeholder="Search..." />
+          <div>
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="action-icons">
+          <div class="action-icon-one">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="action-icon-two">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </section>
+      <h1 id="welcome-title">Welcome Back, User!</h1>
+      <section id="grid-container">
+        <div class="grid-item one">
+          <img src="./assets/getup.jpg" alt="Album 1" class="grid-image" />
+          <span>Album 1</span>
+        </div>
+        <div class="grid-item two">
+          <img src="./assets/french exit.jpg" alt="Album 2" class="grid-image"/>
+          <span>Album 2</span>
+        </div>
+        <div class="grid-item three">
+          <img src="./assets/slowdive.jpg" alt="Album 3" class="grid-image"/>
+          <span>Album 3</span>
+        </div>
+        <div class="grid-item four">
+          <img src="./assets/plastic tree.jpg" alt="Album 4" class="grid-image"/>
+          <span>Album 4</span>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
+
